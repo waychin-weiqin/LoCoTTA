@@ -1,0 +1,38 @@
+CORRUPTION:
+  DATASET: imagenet_c
+  SEVERITY:
+    - 5
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression
+MODEL:
+  ADAPTATION: locotta
+  ARCH: resnet50
+  # ARCH: vit_b_16
+OPTIM:
+  BETA: 0.9
+  LR: 0.00025
+  METHOD: SGD
+  STEPS: 1
+  WD: 0.0
+TEST:
+  BATCH_SIZE: 64
+EATA:
+  FISHER_ALPHA: 0.0
+  D_MARGIN: 0.3
+LOCOTTA:
+  TRADEOFF: 1.0
+  L_W: 1.5

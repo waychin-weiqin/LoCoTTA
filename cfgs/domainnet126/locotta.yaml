@@ -1,0 +1,26 @@
+CORRUPTION:
+  DATASET: domainnet126
+  SEVERITY:
+    - 5
+  TYPE:
+    - clipart
+    - painting
+    - sketch
+MODEL:
+  ADAPTATION: locotta
+  ARCH: resnet50
+  CKPT_PATH: "./ckpt/domainnet126/best_real_2020.pth"
+OPTIM:
+  BETA: 0.9
+  LR: 0.00025
+  METHOD: SGD
+  STEPS: 1
+  WD: 0.0
+TEST:
+  BATCH_SIZE: 128
+LOCOTTA:
+  TRADEOFF: 2.0
+  L_W: 1.0
+EATA:
+  FISHER_ALPHA: 0.0
+  D_MARGIN: 1.0
